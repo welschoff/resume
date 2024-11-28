@@ -2,6 +2,9 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Futura';
+  font-family: 'Poppins', Helvetica, sans-serif;
   background-color: #222222;
+  color: rgb(215, 215, 215);
+  letter-spacing: 0.1rem;
+  font-weight: 300;
 }

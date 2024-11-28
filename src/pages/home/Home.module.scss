@@ -1,0 +1,60 @@
+.home {
+  display: grid;
+  place-items: center;
+  height: 90vh;
+  width: 100%;
+  padding-bottom: 150px;
+
+  .profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 50vw;
+
+    .me {
+      width: 25rem;
+      border-radius: 50%;
+      border: 15px solid rgb(83, 83, 83);
+    }
+
+    .description {
+      display: grid;
+      gap: 10px;
+
+      p {
+        line-height: 1.2rem;
+      }
+
+      .name {
+        color: white;
+        font-size: 2.5rem;
+        letter-spacing: 0.1rem;
+        font-weight: 900;
+      }
+    }
+  }
+
+  .logos {
+    display: flex;
+    gap: 10px;
+
+    .github {
+      width: 3rem;
+      height: 3rem;
+      border: 2px solid #007ced;
+      border-radius: 50%;
+      margin: 2px;
+      cursor: pointer;
+    }
+
+    .linkedin {
+      width: 3rem;
+      height: 3rem;
+      border: 2px solid #007ced;
+      background-color: white;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  }
+}

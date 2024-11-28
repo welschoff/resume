@@ -24,12 +24,12 @@ function NavbarLink({ to, children }: NavbarLinkProps) {
 function Navbar() {
   return (
     <header className={styles.navbar}>
-      <span>Hendrik Welschoff</span>
+      <span className={styles.logo}>HW</span>
       <nav className={styles.navLinks}>
         <NavbarLink to="/">Home</NavbarLink>
         <NavbarLink to="/skills">Skills</NavbarLink>
-        <NavbarLink to="/experiences">Experiences</NavbarLink>
-        <NavbarLink to="/contacts">Contacts</NavbarLink>
+        <NavbarLink to="/experience">Experience</NavbarLink>
+        <NavbarLink to="/contact">Contact</NavbarLink>
       </nav>
     </header>
   );
