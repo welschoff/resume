@@ -13,7 +13,7 @@ function NavbarLink({ to, children }: NavbarLinkProps) {
       to={to}
       style={({ isActive }) => ({
         textDecoration: isActive ? 'underline' : '',
-        color: isActive ? '#282828' : '',
+        color: isActive ? 'white' : '',
       })}
     >
       {children}
