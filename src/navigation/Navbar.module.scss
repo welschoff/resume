@@ -23,3 +23,8 @@ a {
   color: rgb(167, 167, 167);
   font-size: 1.1rem;
 }
+
+a:hover {
+  color: white;
+  transition: 0.5s ease;
+}

@@ -38,6 +38,7 @@
   .logos {
     display: flex;
     gap: 10px;
+    align-items: center;
 
     .github {
       width: 3rem;
@@ -46,6 +47,11 @@
       border-radius: 50%;
       margin: 2px;
       cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .github:hover {
+      transform: scale(1.1);
     }
 
     .linkedin {
@@ -55,6 +61,11 @@
       background-color: white;
       border-radius: 15px;
       cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .linkedin:hover {
+      transform: scale(1.1);
     }
   }
 }
