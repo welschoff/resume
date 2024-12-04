@@ -1,0 +1,74 @@
+.home {
+  display: grid;
+  place-items: center;
+  height: 90vh;
+  width: 100%;
+  padding-bottom: 150px;
+
+  .profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    align-items: center;
+    justify-items: center;
+
+    .me {
+      width: 25rem;
+      border-radius: 50%;
+      border: 15px solid rgb(83, 83, 83);
+      justify-self: end;
+    }
+
+    .description {
+      display: grid;
+      width: 30rem;
+      justify-self: start;
+      gap: 10px;
+
+      p {
+        line-height: 1.2rem;
+      }
+
+      .name {
+        color: var(--highlight-color);
+        font-size: 3rem;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .logos {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .github {
+      width: 3rem;
+      height: 3rem;
+      border: 2px solid #007ced;
+      border-radius: 50%;
+      margin: 2px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .github:hover {
+      transform: scale(1.1);
+    }
+
+    .linkedin {
+      width: 3rem;
+      height: 3rem;
+      border: 2px solid #007ced;
+      background-color: white;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .linkedin:hover {
+      transform: scale(1.1);
+    }
+  }
+}

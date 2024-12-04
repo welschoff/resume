@@ -1,9 +1,15 @@
 .navbar {
+  height: 10vh;
   display: flex;
+  align-items: center;
+  padding: 0 100px 0 100px;
   justify-content: space-between;
-  padding: 20px 150px 20px 100px;
-  color: white;
   font-size: 2rem;
+
+  .logo {
+    color: var(--highlight-color);
+    letter-spacing: 0.2rem;
+  }
 
   .navLinks {
     display: flex;
@@ -13,6 +19,11 @@
 
 a {
   text-decoration: none;
-  color: rgb(167, 167, 167);
+  color: var(--navlink-color);
   font-size: 1.1rem;
+}
+
+a:hover {
+  color: var(--highlight-color);
+  transition: 0.5s ease;
 }
