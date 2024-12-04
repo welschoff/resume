@@ -4,11 +4,10 @@
   align-items: center;
   padding: 0 100px 0 100px;
   justify-content: space-between;
-  color: white;
   font-size: 2rem;
 
   .logo {
-    color: white;
+    color: var(--highlight-color);
     letter-spacing: 0.2rem;
   }
 
@@ -20,11 +19,11 @@
 
 a {
   text-decoration: none;
-  color: rgb(167, 167, 167);
+  color: var(--navlink-color);
   font-size: 1.1rem;
 }
 
 a:hover {
-  color: white;
+  color: var(--highlight-color);
   transition: 0.5s ease;
 }

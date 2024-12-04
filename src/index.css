@@ -4,7 +4,12 @@
   margin: 0;
   font-family: 'Poppins', Helvetica, sans-serif;
   background-color: #222222;
-  color: rgb(215, 215, 215);
+  color: #d7d7d7;
   letter-spacing: 0.1rem;
   font-weight: 300;
+}
+
+:root {
+  --highlight-color: #efefef;
+  --navlink-color: #a7a7a7;
 }

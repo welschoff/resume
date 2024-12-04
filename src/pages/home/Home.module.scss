@@ -8,18 +8,21 @@
   .profile {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
     align-items: center;
     justify-items: center;
-    width: 50vw;
 
     .me {
       width: 25rem;
       border-radius: 50%;
       border: 15px solid rgb(83, 83, 83);
+      justify-self: end;
     }
 
     .description {
       display: grid;
+      width: 30rem;
+      justify-self: start;
       gap: 10px;
 
       p {
@@ -27,10 +30,10 @@
       }
 
       .name {
-        color: white;
-        font-size: 2.5rem;
+        color: var(--highlight-color);
+        font-size: 3rem;
         letter-spacing: 0.1rem;
-        font-weight: 900;
+        font-weight: 600;
       }
     }
   }
