@@ -1,15 +1,14 @@
-.container {
+.skillsContainer {
   display: grid;
+  grid-auto-flow: column;
   width: 100%;
   height: 90vh;
-  place-items: center;
-
-  .skills {
-    display: grid;
-    gap: 20px;
-  }
+  align-items: start;
+  gap: 20px;
 }
 
 img {
-  width: 2.5rem;
+  width: 3rem;
+  max-height: 3rem;
+  object-fit: contain;
 }
