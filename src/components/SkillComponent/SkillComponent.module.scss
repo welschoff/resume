@@ -17,4 +17,16 @@
     border-radius: 1rem;
     justify-self: end;
   }
+
+  .logo {
+    width: 3rem;
+    max-height: 3rem;
+    object-fit: contain;
+  }
+
+  .logo[alt='Next.js'] {
+    background-color: white;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, white 0, transparent 100%);
+  }
 }
