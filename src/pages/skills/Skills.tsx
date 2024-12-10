@@ -7,6 +7,9 @@ import sass from '../../assets/sass.png';
 import mongodb from '../../assets/mongodb.png';
 import css from '../../assets/css.png';
 import jest from '../../assets/jest.png';
+import tailwind from '../../assets/tailwind.png';
+import bootstrap from '../../assets/bootstrap.png';
+import next from '../../assets/next.png';
 import styles from './Skills.module.scss';
 import SkillComponent from '../../components/SkillComponent/SkillComponent';
 import CategoryComponent from '../../components/CategoryComponent/CategoryComponent';
@@ -33,7 +36,10 @@ function Skills() {
           <>
             <SkillComponent logo={react} name="React" rating="80%" />
             <SkillComponent logo={angular} name="Angular" rating="75%" />
+            <SkillComponent logo={next} name="Next.js" rating="90%" />
             <SkillComponent logo={jest} name="Jest" rating="90%" />
+            <SkillComponent logo={tailwind} name="Tailwind CSS" rating="90%" />
+            <SkillComponent logo={bootstrap} name="Bootstrap" rating="90%" />
           </>
         }
       />
