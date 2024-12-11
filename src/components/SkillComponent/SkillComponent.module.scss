@@ -10,9 +10,12 @@
   }
 
   .scale {
-    width: 10rem;
-    height: 1rem;
-    border: 2px solid var(--highlight-color);
+    display: grid;
+    align-items: center;
+    width: 15rem;
+    padding: 1px;
+    height: 0.7rem;
+    border: 2px solid #444;
     border-radius: 1rem;
     justify-self: end;
   }
@@ -23,9 +26,9 @@
     object-fit: contain;
   }
 
-  .logo[alt='Next.js'] {
-    background-color: white;
-    border-radius: 50%;
-    background: radial-gradient(circle at center, white 0, transparent 100%);
-  }
+  //   .logo[alt='Next.js'] {
+  //     background-color: white;
+  //     border-radius: 50%;
+  //     background: radial-gradient(circle at center, white 0, transparent 100%);
+  //   }
 }

@@ -25,7 +25,7 @@ function SkillComponent({ logo, name, rating }: SkillProps) {
           style={{
             width: `${width}%`,
             height: '100%',
-            backgroundColor: 'blue',
+            backgroundColor: '#007ced',
             borderRadius: '10px',
             transition: 'width 0.5s ease-in',
           }}
