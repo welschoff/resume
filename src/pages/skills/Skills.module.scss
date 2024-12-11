@@ -1,8 +1,8 @@
 .skillsContainer {
   display: grid;
+  margin-top: 10vh;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  max-height: 90vh;
   gap: 50px;
 
   .col1 {
