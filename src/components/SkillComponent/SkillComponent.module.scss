@@ -1,0 +1,44 @@
+.container {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 0.25rem;
+
+  .technology {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+    .name {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .ratingValue {
+      align-self: flex-end;
+      font-size: small;
+    }
+  }
+
+  .scale {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    padding: 1px;
+    height: 0.7rem;
+    border: 2px solid #444;
+    border-radius: 1rem;
+  }
+
+  .logo {
+    width: 1.5rem;
+    max-height: 1.5rem;
+    object-fit: contain;
+  }
+
+  //   .logo[alt='Next.js'] {
+  //     background-color: white;
+  //     border-radius: 50%;
+  //     background: radial-gradient(circle at center, white 0, transparent 100%);
+  //   }
+}

@@ -1,0 +1,10 @@
+.categoryContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h3 {
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  }
+}
