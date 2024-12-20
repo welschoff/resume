@@ -1,5 +1,6 @@
 import styles from './SkillComponent.module.scss';
 import { useState, useEffect } from 'react';
+import { fontWeight } from '../../../node_modules/@mui/system/typography/typography.d';
 
 type SkillProps = {
   logo: string;
@@ -17,8 +18,13 @@ function SkillComponent({ logo, name, rating }: SkillProps) {
   return (
     <div className={styles.container}>
       <div className={styles.technology}>
-        <img src={logo} alt={name} className={styles.logo} />
-        <span>{name}</span>
+        <div className={styles.name}>
+          <img src={logo} alt={name} className={styles.logo} />
+          <span>{name}</span>
+        </div>
+        <div className={styles.ratingValue}>
+          <span>{rating}</span>
+        </div>
       </div>
       <div className={styles.scale}>
         <div

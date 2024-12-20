@@ -1,9 +1,10 @@
 .skillsContainer {
+  padding: 3rem;
   display: grid;
   margin-top: 10vh;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  gap: 50px;
+  gap: 3rem;
 
   .col1 {
     grid-column: 1/2;
@@ -15,5 +16,11 @@
 
   .col3 {
     grid-column: 3/4;
+  }
+
+  .divider {
+    background-color: var(--navlink-color);
+    height: 1px;
+    margin: 20px 0 20px 0;
   }
 }

@@ -26,6 +26,7 @@ function Skills() {
           title="Markup Language"
           skill={<SkillComponent logo={html} name="HTML5" rating="90%" />}
         />
+        <div className={styles.divider}></div>
         <CategoryComponent
           title="Frontend Frameworks & Libraries"
           skill={
@@ -45,6 +46,26 @@ function Skills() {
       </div>
       <div className={styles.col2}>
         <CategoryComponent
+          title="Styling Languages"
+          skill={
+            <>
+              <SkillComponent logo={css} name="CSS3" rating="90%" />
+              <SkillComponent logo={sass} name="SCSS" rating="90%" />
+            </>
+          }
+        />
+        <div className={styles.divider}></div>
+        <CategoryComponent
+          title="API Tools"
+          skill={
+            <>
+              <SkillComponent logo={readyapi} name="ReadyAPI" rating="80%" />
+              <SkillComponent logo={postman} name="Postman" rating="80%" />
+            </>
+          }
+        />
+        <div className={styles.divider}></div>
+        <CategoryComponent
           title="Scripting Languages"
           skill={
             <>
@@ -54,25 +75,6 @@ function Skills() {
                 rating="80%"
               />
               <SkillComponent logo={js} name="JavaScript" rating="80%" />
-            </>
-          }
-        />
-
-        <CategoryComponent
-          title="Styling Languages"
-          skill={
-            <>
-              <SkillComponent logo={css} name="CSS3" rating="90%" />
-              <SkillComponent logo={sass} name="SCSS" rating="90%" />
-            </>
-          }
-        />
-        <CategoryComponent
-          title="API Tools"
-          skill={
-            <>
-              <SkillComponent logo={readyapi} name="ReadyAPI" rating="80%" />
-              <SkillComponent logo={postman} name="Postman" rating="80%" />
             </>
           }
         />
@@ -86,6 +88,7 @@ function Skills() {
             </>
           }
         />
+        <div className={styles.divider}></div>
         <CategoryComponent
           title="Testing Frameworks"
           skill={
