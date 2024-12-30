@@ -1,0 +1,30 @@
+.experienceItemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-left: 0.5px solid var(--navlink-color);
+  border-bottom: 0.5px solid var(--navlink-color);
+  height: fit-content;
+  padding: 2rem;
+
+  .range {
+    position: relative;
+    font-weight: 500;
+    font-size: small;
+    left: -3rem;
+    top: 0;
+    border: 2px solid #007ced;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border-radius: 30px;
+  }
+
+  .activities {
+    list-style-position: inside;
+  }
+}
+
+.experienceItemContainer:last-child {
+  border-bottom: none;
+}
