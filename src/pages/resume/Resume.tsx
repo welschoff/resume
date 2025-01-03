@@ -3,8 +3,9 @@ import styles from './Resume.module.scss';
 
 function Resume() {
   return (
-    <div className={styles.experienceContainer}>
-      <div className={styles.items}>
+    <div className={styles.resumeContainer}>
+      <div className={styles.experience}>
+        <h3 className={styles.header}>Experience</h3>
         <ExperienceItem
           range="01/2024 - heute | adesso SE"
           title="Software Engineer"

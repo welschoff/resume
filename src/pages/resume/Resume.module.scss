@@ -1,11 +1,19 @@
-.experienceContainer {
+.resumeContainer {
   display: grid;
   place-items: center;
   margin-top: 10vh;
   height: 90vh;
   width: 100%;
 
-  .items {
+  .experience {
+    width: fit-content;
+  }
+
+  .header {
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, var(--secondary-color), transparent)
+      1;
+    padding-bottom: 0.3rem;
     width: fit-content;
   }
 }
