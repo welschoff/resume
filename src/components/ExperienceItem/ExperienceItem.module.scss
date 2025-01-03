@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  border-left: 0.5px solid var(--navlink-color);
-  border-bottom: 0.5px solid var(--navlink-color);
+  border-left: 1px solid #333;
+  border-bottom: 1px solid #333;
   height: fit-content;
   padding: 2rem;
 
@@ -22,6 +22,8 @@
 
   .activities {
     list-style-position: inside;
+    line-height: 1.75rem;
+    font-size: small;
   }
 }
 
