@@ -1,0 +1,36 @@
+/* Overlay Styling */
+
+.info {
+  display: grid;
+  border: 2px solid #444;
+  width: fit-content;
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.info:hover {
+  transform: translateY(-6px);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Dunkler Hintergrund */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlayContent {
+  position: relative;
+  background: white;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}

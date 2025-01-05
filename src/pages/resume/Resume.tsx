@@ -1,5 +1,6 @@
 import ExperienceItem from '../../components/ExperienceItem/ExperienceItem';
 import styles from './Resume.module.scss';
+import CertificateItem from '../../components/CertificateItem/CertificateItem';
 
 function Resume() {
   return (
@@ -37,6 +38,14 @@ function Resume() {
             'Intensiv-Coding-Bootcamp in Vollzeit',
             '540 Stunden Programmierpraxis mit Eigenentwicklung einer Web App als Abschlussarbeit',
           ]}
+        />
+      </div>
+      <div className={styles.certificates}>
+        <h3 className={styles.header}>Certificates</h3>
+        <CertificateItem
+          pdf="psd.pdf"
+          title="Professional Scrum Developer"
+          date="11.05.2023"
         />
       </div>
     </div>

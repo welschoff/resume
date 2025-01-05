@@ -1,6 +1,5 @@
 import styles from './SkillComponent.module.scss';
 import { useState, useEffect } from 'react';
-import { fontWeight } from '../../../node_modules/@mui/system/typography/typography.d';
 
 type SkillProps = {
   logo: string;

@@ -1,19 +1,27 @@
 .resumeContainer {
   display: grid;
-  place-items: center;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
   margin-top: 10vh;
   height: 90vh;
   width: 100%;
+  padding: 0 10rem 0 10rem;
 
   .experience {
     width: fit-content;
   }
+}
 
-  .header {
-    border-bottom: 2px solid;
-    border-image: linear-gradient(to right, var(--secondary-color), transparent)
-      1;
-    padding-bottom: 0.3rem;
-    width: fit-content;
-  }
+.header {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(
+      to right,
+      transparent,
+      var(--secondary-color),
+      transparent
+    )
+    1;
+  padding-bottom: 0.3rem;
+  width: fit-content;
+  margin-bottom: 2rem;
 }
