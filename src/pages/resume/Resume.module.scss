@@ -1,14 +1,21 @@
 .resumeContainer {
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
   margin-top: 10vh;
   height: 90vh;
   width: 100%;
-  padding: 0 10rem 0 10rem;
+  padding: 1rem;
 
   .experience {
+    justify-self: end;
     width: fit-content;
+  }
+
+  .certificates {
+    display: grid;
+    row-gap: 1rem;
   }
 }
 

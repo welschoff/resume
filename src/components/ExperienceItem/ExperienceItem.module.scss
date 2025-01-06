@@ -5,13 +5,13 @@
   border-left: 1px solid #333;
   border-bottom: 1px solid #333;
   height: fit-content;
-  padding: 2rem;
+  padding: 25px 0 20px 30px;
 
   .range {
     position: relative;
     font-weight: 500;
     font-size: small;
-    left: -3rem;
+    left: -55px;
     top: 0;
     border: 2px solid var(--secondary-color);
     width: fit-content;
@@ -25,6 +25,10 @@
     line-height: 1.75rem;
     font-size: small;
   }
+}
+
+.experienceItemContainer:first-child {
+  padding-top: 10px;
 }
 
 .experienceItemContainer:last-child {

@@ -40,13 +40,20 @@ function Resume() {
           ]}
         />
       </div>
-      <div className={styles.certificates}>
+      <div>
         <h3 className={styles.header}>Certificates</h3>
-        <CertificateItem
-          pdf="psd.pdf"
-          title="Professional Scrum Developer"
-          date="11.05.2023"
-        />
+        <div className={styles.certificates}>
+          <CertificateItem
+            pdf="psd.pdf"
+            title="Professional Scrum Developer"
+            date="11 Mai 2023"
+          />
+          <CertificateItem
+            pdf="neuefische.pdf"
+            title="neue fische Zertifikat"
+            date="20 Dezember 2021"
+          />
+        </div>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import { Document, Page } from 'react-pdf';
 import { useState } from 'react';
 import { pdfjs } from 'react-pdf';
 import styles from './CertificateItem.module.scss';
+import cert from '../../assets/certification.png';
 
 export type CertificateProps = {
   pdf: string;
@@ -25,33 +26,58 @@ function CertificateItem({ pdf, title, date }: CertificateProps) {
 
   function toggleOverlay() {
     setIsOpen(!isOpen);
+    setPageNumber(1);
   }
 
   return (
     <div onClick={toggleOverlay}>
-      <div className={styles.info}>
-        <h3>{title}</h3>
-        <span>{date}</span>
+      <div className={styles.box}>
+        <img src={cert} alt="" />
+        <div className={styles.text}>
+          <h3>{title}</h3>
+          <span>{date}</span>
+        </div>
       </div>
       {isOpen && (
         <div className={styles.overlay}>
-          <div className={styles.overlayContent}>
-            <button onClick={toggleOverlay}>X</button>
+          <div
+            className={styles.overlayContent}
+            onClick={(e) => e.stopPropagation()}
+          >
             <Document
               renderMode="canvas"
               file={pdf}
               onLoadSuccess={onDocumentLoadSuccess}
             >
+              <button className={styles.closeBtn} onClick={toggleOverlay}>
+                X
+              </button>
               <Page
                 pageNumber={pageNumber}
                 renderTextLayer={false}
                 renderAnnotationLayer={false}
               />
+              <div>
+                {numPages && numPages > 1 ? (
+                  <button
+                    className={styles.nextBtn}
+                    onClick={() =>
+                      setPageNumber((prev) =>
+                        numPages && prev >= numPages ? 1 : prev + 1
+                      )
+                    }
+                  >
+                    Next page
+                  </button>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+              <p>
+                Page {pageNumber} of {numPages}
+              </p>
             </Document>
-            <p>
-              Page {pageNumber} of {numPages}
-            </p>
-          </div>{' '}
+          </div>
         </div>
       )}
     </div>
