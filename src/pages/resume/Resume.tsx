@@ -6,7 +6,12 @@ function Resume() {
   return (
     <div className={styles.resumeContainer}>
       <div className={styles.experience}>
-        <h3 className={styles.header}>Experience</h3>
+        <div className={styles.header}>
+          <h2>Experience</h2>
+          <div className={styles.underline1}>
+            <div className={styles.underline2}></div>
+          </div>
+        </div>
         <ExperienceItem
           range="01/2024 - heute | adesso SE"
           title="Software Engineer"
@@ -41,7 +46,12 @@ function Resume() {
         />
       </div>
       <div>
-        <h3 className={styles.header}>Certificates</h3>
+        <div className={styles.header}>
+          <h2>Certificates</h2>
+          <div className={styles.underline1}>
+            <div className={styles.underline2}></div>
+          </div>
+        </div>
         <div className={styles.certificates}>
           <CertificateItem
             pdf="psd.pdf"

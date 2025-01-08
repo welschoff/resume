@@ -32,7 +32,7 @@
 }
 
 .box:hover {
-  transform: translateY(-5px);
+  transform: translatex(5px);
 }
 
 .overlay {
@@ -42,7 +42,7 @@
   left: 0;
   width: 100%;
   height: 90vh;
-  background: rgba(0, 0, 0, 0.7);
+  background: #000000b3;
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -54,4 +54,40 @@
   align-items: center;
   overflow: auto;
   max-height: 100%;
+}
+
+.closeBtn {
+  position: absolute;
+  background-color: transparent;
+  top: 10px;
+  left: 10px;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 10;
+}
+
+.numPages {
+  position: absolute;
+  background-color: transparent;
+  bottom: 0;
+  margin-left: 10px;
+  margin-bottom: 2px;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .arrowUp {
+    width: 2rem;
+    rotate: 180deg;
+  }
+
+  .arrowDown {
+    width: 2rem;
+  }
 }

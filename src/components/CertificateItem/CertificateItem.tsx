@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { pdfjs } from 'react-pdf';
 import styles from './CertificateItem.module.scss';
 import cert from '../../assets/certification.png';
+import arrow from '../../assets/arrow.png';
 
 export type CertificateProps = {
   pdf: string;
@@ -40,6 +41,9 @@ function CertificateItem({ pdf, title, date }: CertificateProps) {
       </div>
       {isOpen && (
         <div className={styles.overlay}>
+          <button className={styles.closeBtn} onClick={toggleOverlay}>
+            X
+          </button>
           <div
             className={styles.overlayContent}
             onClick={(e) => e.stopPropagation()}
@@ -49,35 +53,44 @@ function CertificateItem({ pdf, title, date }: CertificateProps) {
               file={pdf}
               onLoadSuccess={onDocumentLoadSuccess}
             >
-              <button className={styles.closeBtn} onClick={toggleOverlay}>
-                X
-              </button>
               <Page
                 pageNumber={pageNumber}
                 renderTextLayer={false}
                 renderAnnotationLayer={false}
               />
-              <div>
-                {numPages && numPages > 1 ? (
-                  <button
-                    className={styles.nextBtn}
-                    onClick={() =>
-                      setPageNumber((prev) =>
-                        numPages && prev >= numPages ? 1 : prev + 1
-                      )
-                    }
-                  >
-                    Next page
-                  </button>
-                ) : (
-                  <div></div>
-                )}
-              </div>
-              <p>
-                Page {pageNumber} of {numPages}
-              </p>
             </Document>
           </div>
+          {numPages && numPages > 1 ? (
+            <div>
+              <div className={styles.arrows}>
+                <img
+                  className={styles.arrowUp}
+                  src={arrow}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setPageNumber((prev) =>
+                      numPages && prev === 1 ? numPages : prev - 1
+                    );
+                  }}
+                />
+                <img
+                  className={styles.arrowDown}
+                  src={arrow}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setPageNumber((prev) =>
+                      numPages && prev >= numPages ? 1 : prev + 1
+                    );
+                  }}
+                />
+              </div>
+              <p className={styles.numPages}>
+                Page {pageNumber} of {numPages}
+              </p>
+            </div>
+          ) : (
+            <div></div>
+          )}
         </div>
       )}
     </div>
