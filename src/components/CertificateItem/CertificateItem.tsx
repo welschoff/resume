@@ -4,6 +4,7 @@ import { pdfjs } from 'react-pdf';
 import styles from './CertificateItem.module.scss';
 import cert from '../../assets/certification.png';
 import arrow from '../../assets/arrow.png';
+import { useCallback } from 'react';
 
 export type CertificateProps = {
   pdf: string;
@@ -21,19 +22,23 @@ function CertificateItem({ pdf, title, date }: CertificateProps) {
   const [pageNumber, setPageNumber] = useState<number>(1);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
-    setNumPages(numPages);
-  }
+  const onDocumentLoadSuccess = useCallback(
+    ({ numPages }: { numPages: number }) => {
+      setNumPages(numPages);
+    },
+    []
+  );
 
-  function toggleOverlay() {
-    setIsOpen(!isOpen);
+  const toggleOverlay = useCallback((e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    setIsOpen((prev) => !prev);
     setPageNumber(1);
-  }
+  }, []);
 
   return (
     <div onClick={toggleOverlay}>
       <div className={styles.box}>
-        <img src={cert} alt="" />
+        <img src={cert} alt="Certificate preview" />
         <div className={styles.text}>
           <h3>{title}</h3>
           <span>{date}</span>
@@ -52,6 +57,9 @@ function CertificateItem({ pdf, title, date }: CertificateProps) {
               renderMode="canvas"
               file={pdf}
               onLoadSuccess={onDocumentLoadSuccess}
+              onLoadError={(error) =>
+                console.error('PDF loading error:', error)
+              }
             >
               <Page
                 pageNumber={pageNumber}
@@ -61,11 +69,12 @@ function CertificateItem({ pdf, title, date }: CertificateProps) {
             </Document>
           </div>
           {numPages && numPages > 1 ? (
-            <div>
+            <>
               <div className={styles.arrows}>
                 <img
                   className={styles.arrowUp}
                   src={arrow}
+                  alt="Previous page"
                   onClick={(e) => {
                     e.stopPropagation();
                     setPageNumber((prev) =>
@@ -76,10 +85,11 @@ function CertificateItem({ pdf, title, date }: CertificateProps) {
                 <img
                   className={styles.arrowDown}
                   src={arrow}
+                  alt="Next page"
                   onClick={(e) => {
                     e.stopPropagation();
                     setPageNumber((prev) =>
-                      numPages && prev >= numPages ? 1 : prev + 1
+                      prev >= (numPages ?? 1) ? 1 : prev + 1
                     );
                   }}
                 />
@@ -87,9 +97,9 @@ function CertificateItem({ pdf, title, date }: CertificateProps) {
               <p className={styles.numPages}>
                 Page {pageNumber} of {numPages}
               </p>
-            </div>
+            </>
           ) : (
-            <div></div>
+            <></>
           )}
         </div>
       )}
