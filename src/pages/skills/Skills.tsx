@@ -17,6 +17,7 @@ import postman from '../../assets/postman.png';
 import cypress from '../../assets/cypress.png';
 import SkillComponent from '../../components/SkillComponent/SkillComponent';
 import CategoryComponent from '../../components/CategoryComponent/CategoryComponent';
+import CertificateItem from '../../components/CertificateItem/CertificateItem';
 
 function Skills() {
   return (

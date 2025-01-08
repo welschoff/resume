@@ -28,7 +28,7 @@ function Navbar() {
       <nav className={styles.navLinks}>
         <NavbarLink to="/">Home</NavbarLink>
         <NavbarLink to="/skills">Skills</NavbarLink>
-        <NavbarLink to="/experience">Experience</NavbarLink>
+        <NavbarLink to="/resume">Resume</NavbarLink>
         <NavbarLink to="/contact">Contact</NavbarLink>
       </nav>
     </header>
