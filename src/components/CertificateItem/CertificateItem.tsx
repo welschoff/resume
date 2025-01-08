@@ -69,7 +69,7 @@ function CertificateItem({ pdf, title, date }: CertificateProps) {
             </Document>
           </div>
           {numPages && numPages > 1 ? (
-            <>
+            <div>
               <div className={styles.arrows}>
                 <img
                   className={styles.arrowUp}
@@ -97,7 +97,7 @@ function CertificateItem({ pdf, title, date }: CertificateProps) {
               <p className={styles.numPages}>
                 Page {pageNumber} of {numPages}
               </p>
-            </>
+            </div>
           ) : (
             <></>
           )}
