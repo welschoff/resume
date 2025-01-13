@@ -12,7 +12,6 @@ function NavbarLink({ to, children }: NavbarLinkProps) {
     <NavLink
       to={to}
       style={({ isActive }) => ({
-        textDecoration: isActive ? 'underline' : '',
         color: isActive ? 'white' : '',
       })}
     >
