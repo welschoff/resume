@@ -1,9 +1,9 @@
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 10vh;
+  height: 15vh;
   display: flex;
   align-items: center;
   padding: 0 100px 0 100px;
@@ -18,7 +18,7 @@
 
   .navLinks {
     display: flex;
-    gap: 40px;
+    gap: 50px;
   }
 }
 
