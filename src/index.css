@@ -19,3 +19,25 @@ h2,
 h3 {
   font-weight: bold;
 }
+
+/* Stil für die gesamte Scrollbar */
+::-webkit-scrollbar {
+  width: 5px; /* Breite der vertikalen Scrollbar */
+}
+
+/* Stil für den Track (Hintergrund) der Scrollbar */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Heller Hintergrund für den Track */
+  border-radius: 10px; /* Abgerundete Ecken */
+}
+
+/* Stil für den Daumen (Schieber) der Scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Farbe des Daumens */
+  border-radius: 10px; /* Abgerundete Ecken */
+}
+
+/* Stil für den Daumen (Schieber), wenn er hovered wird */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Dunklere Farbe, wenn der Benutzer darüber fährt */
+}
