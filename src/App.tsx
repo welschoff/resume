@@ -11,6 +11,7 @@ import Skills from './pages/skills/Skills';
 import Resume from './pages/resume/Resume';
 import Contact from './pages/contact/Contact';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ElementType } from 'react';
 
 const pageVariants = {
   initial: { opacity: 0, rotateY: 90, scale: 0.8 },
@@ -39,8 +40,10 @@ const AnimatedRoutes = () => {
     document.body.style.overflow = 'auto';
   };
 
+  const AnimatePresenceFixedType = AnimatePresence as ElementType;
+
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresenceFixedType mode="wait">
       <motion.div
         key={location.pathname}
         initial="initial"
@@ -66,7 +69,7 @@ const AnimatedRoutes = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </motion.div>
-    </AnimatePresence>
+    </AnimatePresenceFixedType>
   );
 };
 
