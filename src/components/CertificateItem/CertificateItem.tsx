@@ -1,6 +1,5 @@
-import { Document, Page } from 'react-pdf';
-import { useState } from 'react';
-import { pdfjs } from 'react-pdf';
+import { Document, Page, pdfjs } from 'react-pdf';
+import { useEffect, useState } from 'react';
 import styles from './CertificateItem.module.scss';
 import cert from '../../assets/certification.png';
 import arrow from '../../assets/arrow.png';
@@ -11,11 +10,6 @@ export type CertificateProps = {
   title: string;
   date: string;
 };
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url
-).toString();
 
 function CertificateItem({ pdf, title, date }: CertificateProps) {
   const [numPages, setNumPages] = useState<number>();
@@ -34,6 +28,24 @@ function CertificateItem({ pdf, title, date }: CertificateProps) {
     setIsOpen((prev) => !prev);
     setPageNumber(1);
   }, []);
+
+  pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    'pdfjs-dist/build/pdf.worker.min.mjs',
+    import.meta.url
+  ).toString();
+
+  // Effekt zum Steuern des Scrollens
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isOpen]);
 
   return (
     <div onClick={toggleOverlay}>
