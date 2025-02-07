@@ -2,7 +2,7 @@
   "name": "resume",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://welschoff.github.io/resume/",
+  "homepage": ".",
   "dependencies": {
     "@fontsource/roboto": "^5.1.0",
     "@svgr/webpack": "^8.1.0",
@@ -54,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.2.0"
   }
 }
