@@ -11,9 +11,21 @@
   font-size: 2rem;
   z-index: 100000;
 
-  .logo {
-    color: var(--highlight-color);
-    letter-spacing: 0.2rem;
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+
+    .svgContainer svg {
+      background-color: var(--highlight-color);
+      padding: 1px;
+      border-radius: 50%;
+    }
+
+    span {
+      font-weight: bold;
+    }
   }
 
   .navLinks {
