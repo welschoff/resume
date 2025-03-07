@@ -13,7 +13,7 @@ function ExperienceItem({ range, title, activities }: ExperienceItemProps) {
       <h3>{title}</h3>
       <ul className={styles.activities}>
         {activities.map((activity: string) => (
-          <li>{activity}</li>
+          <li key={title}>{activity}</li>
         ))}
       </ul>
     </div>
