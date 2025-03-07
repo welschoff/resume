@@ -39,37 +39,26 @@
     }
   }
 
-  .logos {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  .download {
+    border: 2px solid var(--secondary-color);
+    width: fit-content;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
 
-    .github {
-      width: 3rem;
-      height: 3rem;
-      border: 2px solid #007ced;
-      border-radius: 50%;
-      margin: 2px;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
+    a {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
     }
 
-    .github:hover {
-      transform: scale(1.1);
+    &:hover {
+      background-color: var(--secondary-color);
     }
 
-    .linkedin {
-      width: 3rem;
-      height: 3rem;
-      border: 2px solid #007ced;
-      background-color: white;
-      border-radius: 15px;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .linkedin:hover {
-      transform: scale(1.1);
+    &:hover a {
+      background-color: var(--secondary-color);
     }
   }
 }

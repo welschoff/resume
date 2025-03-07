@@ -1,7 +1,5 @@
 import me from '../../assets/profilbild.jpeg';
 import styles from './Home.module.scss';
-import github from '../../assets/github.png';
-import linkedin from '../../assets/linkedin.png';
 
 function Home() {
   return (
@@ -12,14 +10,18 @@ function Home() {
           <span className={styles.position}>Frontend Developer</span>
           <span className={styles.name}>Hendrik Welschoff</span>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-            earum animi nemo qui incidunt natus nostrum assumenda fugit, vero
-            quia pariatur, quis aperiam eum magni laboriosam sed velit
-            consequuntur molestias!
+            Als leidenschaftlicher Frontend-Entwickler vereine ich Design und
+            Funktionalität, um performante und benutzerfreundliche in HTML, CSS,
+            JavaScript, TypeScript sowie React und Angular entwickle ich
+            intuitive User Interfaces. Meine Stärken liegen in sauberer
+            Code-Architektur, responsivem Design und Performance-Optimierung.
+            Stets neugierig auf neue Technologien, setze ich innovative digitale
+            Lösungen um.
           </p>
-          <div className={styles.logos}>
-            <img className={styles.github} src={github} alt="" />
-            <img className={styles.linkedin} src={linkedin} alt="" />
+          <div className={styles.download}>
+            <a href="/cv.pdf" download="cv.pdf">
+              Download CV
+            </a>
           </div>
         </div>
       </div>

@@ -32,7 +32,6 @@ function SkillComponent({ logo, name, rating }: SkillProps) {
             height: '100%',
             backgroundColor: '#007ced',
             borderRadius: '10px',
-            transition: 'width 0.5s ease-in',
           }}
         ></div>
       </div>
