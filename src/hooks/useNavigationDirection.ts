@@ -11,11 +11,9 @@ export function useNavigationDirection(): 1 | -1 {
     const lastIndex = historyStack.current.lastIndexOf(currentPath);
 
     if (lastIndex !== -1) {
-      // User navigated back to a previous route
       historyStack.current.splice(lastIndex + 1);
       setDirection(-1);
     } else {
-      // New route (forward navigation)
       historyStack.current.push(currentPath);
       setDirection(1);
     }
