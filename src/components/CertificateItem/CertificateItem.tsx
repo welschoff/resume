@@ -34,7 +34,6 @@ function CertificateItem({ pdf, title, date }: CertificateProps) {
     import.meta.url
   ).toString();
 
-  // Effekt zum Steuern des Scrollens
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';

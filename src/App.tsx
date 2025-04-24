@@ -5,82 +5,42 @@ import {
   Route,
   useLocation,
 } from 'react-router-dom';
+import { AnimatePresence } from 'motion/react';
 import Navbar from './navigation/Navbar';
 import Home from './pages/home/Home';
 import Skills from './pages/skills/Skills';
 import Resume from './pages/resume/Resume';
 import Contact from './pages/contact/Contact';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ElementType } from 'react';
+import Slide from './components/SlideComponent/Slide';
+import { useNavigationDirection } from './hooks/useNavigationDirection';
 
-const pageVariants = {
-  initial: { opacity: 0, rotateY: 90, scale: 0.8 },
-  animate: {
-    opacity: 1,
-    rotateY: 0,
-    scale: 1,
-    transition: { duration: 0.6, ease: 'easeOut' },
-  },
-  exit: {
-    opacity: 0,
-    rotateY: -90,
-    scale: 0.8,
-    transition: { duration: 0.6, ease: 'easeIn' },
-  },
-};
-
-const AnimatedRoutes = () => {
+function AnimatedRoutes() {
   const location = useLocation();
-
-  const disableScrollbar = () => {
-    document.body.style.overflow = 'hidden';
-  };
-
-  const enableScrollbar = () => {
-    document.body.style.overflow = 'auto';
-  };
-
-  const AnimatePresenceFixedType = AnimatePresence as ElementType;
+  const direction = useNavigationDirection();
 
   return (
-    <AnimatePresenceFixedType mode="wait">
-      <motion.div
-        key={location.pathname}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        variants={pageVariants}
-        style={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          top: 0,
-          left: 0,
-        }}
-        onAnimationStart={disableScrollbar}
-        onAnimationComplete={enableScrollbar}
-      >
-        <Navbar />
-
-        <Routes location={location}>
-          <Route path="/" element={<Home />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </motion.div>
-    </AnimatePresenceFixedType>
+    <div style={{ position: 'relative', overflow: 'hidden' }}>
+      <AnimatePresence custom={direction} initial={false} mode="wait">
+        <Slide key={location.pathname}>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Slide>
+      </AnimatePresence>
+    </div>
   );
-};
+}
 
-const App = () => {
+function App() {
   return (
     <Router>
-      <div style={{ perspective: '1000px' }}>
-        <AnimatedRoutes />
-      </div>
+      <Navbar />
+      <AnimatedRoutes />
     </Router>
   );
-};
+}
 
 export default App;

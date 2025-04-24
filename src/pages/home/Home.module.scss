@@ -1,10 +1,8 @@
 .home {
   display: grid;
   place-items: center;
-  margin-top: var(--navbar-height);
   width: 100%;
   height: calc(100vh - var(--navbar-height));
-  padding-bottom: 150px;
 
   .profile {
     display: grid;
