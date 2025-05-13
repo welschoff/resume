@@ -1,8 +1,8 @@
 {
   "name": "resume",
+  "homepage": "https://welschoff.github.io/resume",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
   "dependencies": {
     "@fontsource/roboto": "^5.1.0",
     "@gsap/react": "^2.1.2",
