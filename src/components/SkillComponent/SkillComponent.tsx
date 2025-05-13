@@ -1,13 +1,13 @@
 import styles from './SkillComponent.module.scss';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactNode } from 'react';
 
 type SkillProps = {
-  logo: string;
+  icon: ReactNode;
   name: string;
   rating: string;
 };
 
-function SkillComponent({ logo, name, rating }: SkillProps) {
+function SkillComponent({ icon, name, rating }: SkillProps) {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ function SkillComponent({ logo, name, rating }: SkillProps) {
     <div className={styles.container}>
       <div className={styles.technology}>
         <div className={styles.name}>
-          <img src={logo} alt={name} className={styles.logo} />
+          {icon}
           <span>{name}</span>
         </div>
         <div className={styles.ratingValue}>
