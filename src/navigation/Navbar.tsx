@@ -1,24 +1,5 @@
-import { NavLink, To } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './Navbar.module.scss';
-import { ReactNode } from 'react';
-
-interface NavbarLinkProps {
-  to: To;
-  children: ReactNode;
-}
-
-function NavbarLink({ to, children }: NavbarLinkProps) {
-  return (
-    <NavLink
-      to={to}
-      style={({ isActive }) => ({
-        color: isActive ? 'white' : '',
-      })}
-    >
-      {children}
-    </NavLink>
-  );
-}
 
 function Navbar() {
   return (
@@ -42,10 +23,10 @@ function Navbar() {
         <span>Hendrik Welschoff</span>
       </div>
       <nav className={styles.navLinks}>
-        <NavbarLink to="/">Home</NavbarLink>
-        <NavbarLink to="/skills">Skills</NavbarLink>
-        <NavbarLink to="/resume">Resume</NavbarLink>
-        <NavbarLink to="/contact">Contact</NavbarLink>
+        <Link to="/">Home</Link>
+        <Link to="/skills">Skills</Link>
+        <Link to="/resume">Resume</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
     </header>
   );
