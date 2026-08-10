@@ -12,11 +12,15 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  padding-top: var(--navbar-height);
+}
+
 :root {
   --highlight-color: #efefef;
   --navlink-color: #a7a7a7;
   --secondary-color: #007ced;
-  --navbar-height: 15vh;
+  --navbar-height: 10rem;
 }
 
 h2,
