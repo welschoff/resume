@@ -8,6 +8,10 @@
   font-weight: 300;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --highlight-color: #efefef;
   --navlink-color: #a7a7a7;
