@@ -16,6 +16,10 @@ body {
   padding-top: var(--navbar-height);
 }
 
+section {
+  scroll-margin-top: var(--navbar-height);
+}
+
 :root {
   --highlight-color: #efefef;
   --navlink-color: #a7a7a7;

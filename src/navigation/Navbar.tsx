@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styles from './Navbar.module.scss';
 
 function Navbar() {
@@ -23,10 +22,10 @@ function Navbar() {
         <span>Hendrik Welschoff</span>
       </div>
       <nav className={styles.navLinks}>
-        <Link to="/">Home</Link>
-        <Link to="/skills">Skills</Link>
-        <Link to="/resume">Resume</Link>
-        <Link to="/contact">Contact</Link>
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
   );
