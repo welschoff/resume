@@ -1,12 +1,10 @@
 import styles from './Skills.module.scss';
 import SkillComponent from '../../components/SkillComponent/SkillComponent';
 import CategoryComponent from '../../components/CategoryComponent/CategoryComponent';
-import PageTitle from '../../components/PageTitle/PageTitle';
 
 function Skills() {
   return (
     <div>
-      <PageTitle title="Skills" />
       <div className={styles.skillsContainer}>
         <div className={styles.col1}>
           <CategoryComponent

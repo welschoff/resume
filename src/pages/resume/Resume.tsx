@@ -1,12 +1,10 @@
 import ExperienceItem from '../../components/ExperienceItem/ExperienceItem';
 import styles from './Resume.module.scss';
 import CertificateItem from '../../components/CertificateItem/CertificateItem';
-import PageTitle from '../../components/PageTitle/PageTitle';
 
 function Resume() {
   return (
     <div>
-      <PageTitle title="Resume" />
       <div className={styles.resumeContainer}>
         <div className={styles.experience}>
           <div className={styles.header}>

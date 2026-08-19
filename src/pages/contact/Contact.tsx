@@ -3,12 +3,10 @@ import { Smartphone, Home, IconContext, Envelope } from 'react-flaticons';
 import github from '../../assets/github.png';
 import linkedin from '../../assets/linkedin.png';
 import styles from './Contact.module.scss';
-import PageTitle from '../../components/PageTitle/PageTitle';
 
 function Contact() {
   return (
     <div>
-      <PageTitle title="Contact" />
       <IconContext.Provider value={{ color: '#007ced', size: '35px' }}>
         <div className={styles.contactContainer}>
           <div className={styles.items}>
