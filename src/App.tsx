@@ -11,12 +11,12 @@ gsap.registerPlugin(useGSAP);
 
 function App() {
   return (
-    <div>
-      <header>
+    <div className="page-container">
+      <header className="header">
         <Navbar />
       </header>
 
-      <main>
+      <main className="main">
         <section id="home">
           <Home />
         </section>

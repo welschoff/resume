@@ -8,12 +8,22 @@
   font-weight: 300;
 }
 
-html {
-  scroll-behavior: smooth;
+.page-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  padding: 5rem 20rem 0 20rem;
 }
 
-body {
-  padding-top: var(--navbar-height);
+.header {
+  width: 50%;
+}
+
+.main {
+  width: 50%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 section {
@@ -24,7 +34,6 @@ section {
   --highlight-color: #efefef;
   --navlink-color: #a7a7a7;
   --secondary-color: #007ced;
-  --navbar-height: 10rem;
 }
 
 h2,
